@@ -19,7 +19,7 @@ namespace Cruzeiro
         {
             discord = new DiscordClient(new DiscordConfiguration
             {
-                Token = "NzYzODk1MDg3MTkyNzM1NzQ0.X3-WvQ.R6fZz3mi34bNhTVhR77W6UWfr0E",
+                Token = "youknowicantputmytokenhere",
                 TokenType = TokenType.Bot,
                 UseInternalLogHandler = true,
                 LogLevel = LogLevel.Debug
