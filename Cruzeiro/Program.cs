@@ -1,12 +1,14 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using DSharpPlus;
+using DSharpPlus.CommandsNext;
 
-namespace MyFirstBot
+namespace Cruzeiro
 {
     class Program
     {
         static DiscordClient discord;
+        static CommandsNextModule commands;
 
         static void Main(string[] args)
         {
@@ -17,11 +19,28 @@ namespace MyFirstBot
         {
             discord = new DiscordClient(new DiscordConfiguration
             {
-                Token = "youknowicantsaymytokeninpublic",
-                TokenType = TokenType.Bot
+                Token = "youknowicantputmytokenhere",
+                TokenType = TokenType.Bot,
+                UseInternalLogHandler = true,
+                LogLevel = LogLevel.Debug
             });
+
+            discord.MessageCreated += async e =>
+            {
+                if (e.Message.Content.ToLower().StartsWith("ping"))
+                    await e.Message.RespondAsync("pong!");
+            };
+
+            commands = discord.UseCommandsNext(new CommandsNextConfiguration
+            {
+                StringPrefix = "."
+            });
+
+            commands.RegisterCommands<MyCommands>();
+
             await discord.ConnectAsync();
             await Task.Delay(-1);
         }
     }
 }
+
