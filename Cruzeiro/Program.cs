@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
@@ -19,7 +19,7 @@ namespace Cruzeiro
         {
             discord = new DiscordClient(new DiscordConfiguration
             {
-                Token = "",
+                Token = "youknowicantputmytokenhere",
                 TokenType = TokenType.Bot,
                 UseInternalLogHandler = true,
                 LogLevel = LogLevel.Debug
@@ -28,7 +28,7 @@ namespace Cruzeiro
             discord.MessageCreated += async e =>
             {
                 if (e.Message.Content.ToLower().StartsWith("ping"))
-                    await e.Message.RespondAsync("pong");
+                    await e.Message.RespondAsync("pong!");
             };
 
             commands = discord.UseCommandsNext(new CommandsNextConfiguration
@@ -43,3 +43,4 @@ namespace Cruzeiro
         }
     }
 }
+
