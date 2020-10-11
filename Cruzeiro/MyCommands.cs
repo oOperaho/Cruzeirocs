@@ -13,7 +13,7 @@ namespace Cruzeiro
         [Command("olá")]
         public async Task Olá(CommandContext ctx)
         {
-            await ctx.RespondAsync($"👋 olá {ctx.User.Mention}!");
+            await ctx.RespondAsync($"👋 olá {ctx.User.Mention}");
         }
     }
 }
