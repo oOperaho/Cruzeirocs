@@ -47,6 +47,8 @@ namespace Cruzeiro
 
             await ctx.RespondAsync($"A soma desses números é: {sum.ToString("#,##0")}");
         }
+        [Command("complementares"), Description("Atividades Complementares.")]
+
 
     }
 }
