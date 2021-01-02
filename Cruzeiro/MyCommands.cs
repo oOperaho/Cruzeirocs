@@ -49,7 +49,10 @@ namespace Cruzeiro
         }
         [Command("complementares"), Description("Atividades Complementares.")]
         public async Task AtvComplementares(CommandContext ctx)
+        {
+            await ctx.TriggerTypingAsync();
 
+            
     }
 }
 
