@@ -51,7 +51,8 @@ namespace Cruzeiro
         public async Task AtvComplementares(CommandContext ctx)
         {
             await ctx.TriggerTypingAsync();
-
+            await ctx.RespondAsync("Link para o tutorial de atividades complementares: https://www.kaltura.com/index.php/extwidget/preview/partner_id/1756931/uiconf_id/31364942/entry_id/1_2i4tvsox/embed/auto?&flashvars[streamerType]=auto");
+        }
             
     }
 }
