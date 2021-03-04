@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.CommandsNext;
 using DSharpPlus.CommandsNext.Attributes;
-using DSHarpPlus.Entities;
+using DSharpPlus.Entities;
 using System.Linq;
 
 namespace Cruzeiro
