@@ -2,4 +2,4 @@
 
 Setup of the token, packages, and all the extensions are in the Program.cs
 
-The first commands are simple, i will try to fix some lines, and make a system of member-joining.
+I've changed the code lang, now the bot is here: https://github.com/oOperaho/Cruzeiro
